@@ -1,0 +1,42 @@
+/* style.css */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5EEDC; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3C6E47; 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2a5033; 
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+/* Text Selection Color */
+::selection {
+    background: #B09B71;
+    color: white;
+}
+
+/* Smooth Scroll is handled by 'scroll-smooth' class on HTML, 
+   but we can force it for legacy support */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile Menu Transitions */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    transform-origin: top;
+}

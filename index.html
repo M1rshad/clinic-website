@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prana Ayurveda Hospital | Holistic Healing</title>
+    <meta name="description" content="Experience authentic Ayurvedic treatments at Prana Hospital. Panchakarma, Detox, and Holistic Healing.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for instant usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ayurGreen: '#3C6E47',
+                        ayurCream: '#F5EEDC',
+                        ayurBrown: '#B09B71',
+                        ayurDark: '#1F2937',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-ayurCream text-gray-800 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm dark:bg-gray-900/90">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-ayurGreen dark:text-ayurCream flex items-center gap-2">
+                <i class="fas fa-leaf"></i> Prana Ayurveda
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#about" class="hover:text-ayurGreen transition">About</a>
+                <a href="#treatments" class="hover:text-ayurGreen transition">Treatments</a>
+                <a href="#doctors" class="hover:text-ayurGreen transition">Doctors</a>
+                <a href="#testimonials" class="hover:text-ayurGreen transition">Stories</a>
+                <a href="#contact" class="hover:text-ayurGreen transition">Contact</a>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+
+                <a href="https://wa.me/1234567890?text=Hello%2C+I+want+to+book+an+appointment" target="_blank" class="bg-ayurGreen text-white px-5 py-2 rounded-full hover:bg-green-800 transition shadow-lg transform hover:-translate-y-0.5">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-ayurGreen">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 absolute w-full border-t dark:border-gray-700">
+            <div class="flex flex-col p-6 space-y-4 font-medium text-center">
+                <a href="#about" class="mobile-link">About</a>
+                <a href="#treatments" class="mobile-link">Treatments</a>
+                <a href="#doctors" class="mobile-link">Doctors</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Ayurveda Spa Background" class="w-full h-full object-cover opacity-90 dark:opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-ayurGreen/40 mix-blend-multiply"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <h2 class="gsap-hero-text text-lg md:text-xl tracking-widest uppercase mb-4 font-semibold text-ayurCream">Welcome to Prana</h2>
+            <h1 class="gsap-hero-text text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
+                Restore Balance <br> <span class="italic font-light">Revive Life</span>
+            </h1>
+            <p class="gsap-hero-text text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-100">
+                Authentic Ayurvedic treatments tailored to your body type (Dosha) for holistic healing and rejuvenation.
+            </p>
+            <div class="gsap-hero-button">
+                <a href="https://wa.me/1234567890?text=Hi,+I+would+like+to+know+more+about+treatments" target="_blank" class="bg-ayurCream text-ayurGreen px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition shadow-xl flex items-center gap-3 mx-auto w-max">
+                    <i class="fab fa-whatsapp text-2xl"></i> Book Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-32 bg-ayurCream dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 relative gsap-fade-up">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-ayurBrown rounded-tl-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Herbal Medicine" class="rounded-lg shadow-2xl w-full object-cover h-[400px]">
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-ayurBrown rounded-br-3xl"></div>
+                </div>
+                <div class="md:w-1/2 gsap-fade-up">
+                    <h3 class="text-ayurBrown font-bold tracking-widest uppercase mb-2">About Us</h3>
+                    <h2 class="text-4xl font-serif font-bold text-ayurGreen dark:text-white mb-6">Ancient Wisdom, Modern Care</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        At Prana Ayurveda Hospital, we believe in the body's innate ability to heal. Combining 5,000 years of Vedic wisdom with modern diagnostics, our expert Vaidyas (doctors) create personalized treatment plans.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        We specialize in chronic lifestyle disorders, detoxification (Panchakarma), and stress management therapies designed to harmonize your Mind, Body, and Soul.
+                    </p>
+                    <a href="#contact" class="text-ayurGreen dark:text-ayurCream font-bold border-b-2 border-ayurGreen hover:text-ayurBrown transition">Learn More About Our Legacy &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+<section id="treatments" class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16 gsap-fade-up">
+            <h2 class="text-4xl font-serif font-bold text-ayurGreen dark:text-white mb-4">Our Therapies</h2>
+            <div class="w-20 h-1 bg-ayurBrown mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                We offer a comprehensive range of traditional Ayurvedic treatments designed to detoxify, rejuvenate, and heal the body from within.
+            </p>
+        </div>
+
+        <!-- Grid Layout -->
+        <!-- Note: Removed 'gsap-stagger-card' to fix visibility issue -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 1. Abhyanga -->
+            <div class="group bg-ayurCream dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2">
+                <div class="h-64 w-full relative">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="Abhyanga Massage" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-ayurGreen/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-serif font-bold text-ayurGreen dark:text-white mb-3">Abhyanga</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A synchronized full-body warm oil massage that improves circulation, eliminates toxins, and relieves physical and mental fatigue.</p>
+                    <span class="text-ayurBrown font-bold text-sm uppercase tracking-wide group-hover:text-ayurGreen transition">Know More &rarr;</span>
+                </div>
+            </div>
+
+            <!-- 2. Shirodhara -->
+            <div class="group bg-ayurCream dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2">
+                <div class="h-64 w-full relative">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="Shirodhara" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                         loading="lazy">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-serif font-bold text-ayurGreen dark:text-white mb-3">Shirodhara</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A profound relaxation therapy involving the pouring of warm medicated oil on the forehead. Excellent for anxiety, insomnia, and migraines.</p>
+                    <span class="text-ayurBrown font-bold text-sm uppercase tracking-wide group-hover:text-ayurGreen transition">Know More &rarr;</span>
+                </div>
+            </div>
+
+            <!-- 3. Panchakarma -->
+            <div class="group bg-ayurCream dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2">
+                <div class="h-64 w-full relative">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="Panchakarma Detox" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                         loading="lazy">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-serif font-bold text-ayurGreen dark:text-white mb-3">Panchakarma</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">The ultimate 5-step cellular detoxification process (Vamana, Virechana, Basti, Nasya, Raktamokshana) to reset your body's equilibrium.</p>
+                    <span class="text-ayurBrown font-bold text-sm uppercase tracking-wide group-hover:text-ayurGreen transition">Know More &rarr;</span>
+                </div>
+            </div>
+
+            <!-- 4. Udvartana -->
+            <div class="group bg-ayurCream dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2">
+                <div class="h-64 w-full relative">
+                    <img src="https://images.unsplash.com/photo-1615486511484-92e5462d9ed7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="Udvartana Powder Massage" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                         loading="lazy">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-serif font-bold text-ayurGreen dark:text-white mb-3">Udvartana</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A therapeutic herbal powder massage aimed at weight loss and cellulite reduction. It exfoliates the skin and improves metabolic activity.</p>
+                    <span class="text-ayurBrown font-bold text-sm uppercase tracking-wide group-hover:text-ayurGreen transition">Know More &rarr;</span>
+                </div>
+            </div>
+
+            <!-- 5. Nasya -->
+            <div class="group bg-ayurCream dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2">
+                <div class="h-64 w-full relative">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d885?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="Nasya Therapy" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                         loading="lazy">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-serif font-bold text-ayurGreen dark:text-white mb-3">Nasya</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Administration of herbal oils through the nasal passage to clear sinuses, treat migraines, and improve mental clarity and vision.</p>
+                    <span class="text-ayurBrown font-bold text-sm uppercase tracking-wide group-hover:text-ayurGreen transition">Know More &rarr;</span>
+                </div>
+            </div>
+
+            <!-- 6. Kati Basti -->
+            <div class="group bg-ayurCream dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2">
+                <div class="h-64 w-full relative">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="Kati Basti" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                         loading="lazy">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-serif font-bold text-ayurGreen dark:text-white mb-3">Kati Basti</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A specialized therapy for lower back pain where warm medicated oil is retained on the spine using a dough dam to relieve stiffness.</p>
+                    <span class="text-ayurBrown font-bold text-sm uppercase tracking-wide group-hover:text-ayurGreen transition">Know More &rarr;</span>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- View All Button -->
+        <div class="text-center mt-12 gsap-fade-up">
+            <a href="https://wa.me/1234567890?text=I+want+to+book+an+appointment" target="_blank" class="inline-block border-2 border-ayurGreen text-ayurGreen dark:text-ayurCream dark:border-ayurCream px-8 py-3 rounded-full font-bold hover:bg-ayurGreen hover:text-white transition duration-300">
+                Consult a Doctor for Advice
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Doctor Profile -->
+    <section id="doctors" class="py-20 bg-ayurGreen dark:bg-gray-800 text-white relative">
+        <!-- Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/flower-trail.png')]"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-10 justify-center">
+                <div class="md:w-1/3 gsap-fade-right">
+                    <div class="border-4 border-ayurBrown p-2 rounded-full w-64 h-64 mx-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Chief Doctor" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left gsap-fade-left">
+                    <h4 class="text-ayurBrown font-bold uppercase tracking-widest mb-2">Chief Physician</h4>
+                    <h2 class="text-4xl font-serif font-bold mb-4">Dr. Ananya Sharma</h2>
+                    <p class="text-xl mb-2 font-light italic">B.A.M.S, M.D (Ayurveda)</p>
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        With over 15 years of clinical experience, Dr. Sharma specializes in metabolic disorders and preventive cardiology through Ayurvedic principles. She leads our team of 10 specialized therapists.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-ayurCream">15+</span>
+                            <span class="text-xs uppercase">Years Exp</span>
+                        </div>
+                        <div class="w-px bg-gray-500 h-10"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-ayurCream">5k+</span>
+                            <span class="text-xs uppercase">Patients Healed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-ayurCream dark:bg-gray-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12 gsap-fade-up">
+                <h2 class="text-3xl font-serif font-bold text-ayurGreen dark:text-white">Patient Stories</h2>
+            </div>
+            
+            <div class="relative bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-xl gsap-scale-up">
+                <i class="fas fa-quote-left text-4xl text-ayurBrown/30 absolute top-8 left-8"></i>
+                
+                <!-- Slider Container -->
+                <div id="testimonial-slider" class="min-h-[200px] flex items-center justify-center">
+                    <!-- Content injected by JS -->
+                </div>
+
+                <!-- Controls -->
+                <div class="flex justify-center gap-4 mt-6">
+                    <button onclick="prevSlide()" class="w-10 h-10 rounded-full border border-ayurGreen text-ayurGreen hover:bg-ayurGreen hover:text-white transition flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+                    <button onclick="nextSlide()" class="w-10 h-10 rounded-full border border-ayurGreen text-ayurGreen hover:bg-ayurGreen hover:text-white transition flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="gsap-fade-up">
+                    <h2 class="text-4xl font-serif font-bold text-ayurGreen dark:text-white mb-6">Visit Our Center</h2>
+                    <p class="mb-8 text-gray-600 dark:text-gray-300">We are open 7 days a week. Appointments are recommended for consultation.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-ayurCream p-3 rounded-full text-ayurGreen">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold dark:text-white">Address</h4>
+                                <p class="text-gray-600 dark:text-gray-400">123 Green Valley Road, Kerala, India 682001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-ayurCream p-3 rounded-full text-ayurGreen">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold dark:text-white">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-400">+91 98765 43210</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-ayurCream p-3 rounded-full text-ayurGreen">
+                                <i class="far fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold dark:text-white">Hours</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Mon - Sat: 9:00 AM - 7:00 PM <br> Sun: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/1234567890?text=I+want+to+book+an+appointment" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="h-80 md:h-auto rounded-xl overflow-hidden shadow-lg border-4 border-ayurCream gsap-fade-up delay-100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.053364221278!2d76.2673!3d9.9312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTUnNTIuMyJOIDc2wrAxNicwMi4zIkU!5e0!3m2!1sen!2sin!4v1633072800000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ayurDark text-white py-12 border-t border-gray-700">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-serif font-bold mb-2">Prana Ayurveda</h3>
+                <p class="text-gray-400 text-sm">&copy; 2023 Prana Hospital. All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-ayurCream transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-ayurCream transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-ayurCream transition"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
