@@ -74,7 +74,7 @@
             </button>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 absolute w-full border-t dark:border-gray-700">
             <div class="flex flex-col p-6 space-y-4 font-medium text-center">
                 <a href="#about" class="mobile-link">About</a>
@@ -82,7 +82,22 @@
                 <a href="#doctors" class="mobile-link">Doctors</a>
                 <a href="#contact" class="mobile-link">Contact</a>
             </div>
+        </div> -->
+        <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 absolute w-full border-t dark:border-gray-700 shadow-lg transition-all duration-300">
+        <div class="flex flex-col p-6 space-y-4 font-medium text-center">
+            <a href="#about" class="mobile-link hover:text-ayurGreen dark:text-gray-200">About</a>
+            <a href="#treatments" class="mobile-link hover:text-ayurGreen dark:text-gray-200">Treatments</a>
+            <a href="#doctors" class="mobile-link hover:text-ayurGreen dark:text-gray-200">Doctors</a>
+            <a href="#contact" class="mobile-link hover:text-ayurGreen dark:text-gray-200">Contact</a>
+            
+            <!-- NEW Mobile Dark Mode Toggle -->
+            <button id="mobile-theme-toggle" class="flex items-center justify-center gap-2 w-full py-3 mt-2 border rounded-full border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                <i class="fas fa-moon theme-icon-visual"></i> 
+                <span id="mobile-theme-text">Switch to Dark Mode</span>
+            </button>
         </div>
+    </div>
     </nav>
 
     <!-- Hero Section -->
